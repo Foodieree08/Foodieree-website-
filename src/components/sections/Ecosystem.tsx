@@ -198,6 +198,19 @@ export default function Ecosystem() {
                   </div>
                 </div>
 
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#F0FAF4] border-2 border-emerald-400 shadow-2xs">
+                  <span className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 font-black text-xs mt-0.5">
+                    ✓
+                  </span>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <strong className="text-[#047857] text-[14px]">Up to 2% Creator Commission Per Order</strong>
+                      <span className="px-1.5 py-0.2 rounded bg-amber-500 text-black text-[9px] font-mono font-bold">REEL REWARD</span>
+                    </div>
+                    <span className="text-[12px] text-[#2E2A24] font-medium">Food creators & reviewers earn up to 2% commission on every order placed directly through their 15s video reel.</span>
+                  </div>
+                </div>
+
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#D6CEC1]">
                   <span className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 font-black text-xs mt-0.5">
                     ✓
@@ -223,8 +236,8 @@ export default function Ecosystem() {
                     ✓
                   </span>
                   <div>
-                    <strong className="text-[#12100E] block text-[13px]">Instant Daily UPI & Creator Revenue Share</strong>
-                    <span className="text-[11.5px] text-[#57524A]">Daily UPI settlements for delivery captains and cash commissions for food reviewers.</span>
+                    <strong className="text-[#12100E] block text-[13px]">Instant Daily UPI Settlements</strong>
+                    <span className="text-[11.5px] text-[#57524A]">Instant daily UPI payouts for delivery captains with zero deduction delays.</span>
                   </div>
                 </div>
               </div>

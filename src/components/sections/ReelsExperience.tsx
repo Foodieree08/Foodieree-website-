@@ -1,52 +1,54 @@
 "use client";
 
-import { useState } from "react";
+import { useRef } from "react";
 import InteractiveReelCard, { ReelItem } from "@/components/ui/InteractiveReelCard";
-import ReelsModalPlayer from "@/components/ui/ReelsModalPlayer";
-import { ArrowRight, Flame, Store, Sparkles, Video, Play } from "lucide-react";
+import { ArrowLeft, ArrowRight, Flame, Store, Play } from "lucide-react";
 
 const reelsData: ReelItem[] = [
   {
     id: "r1",
     title: "Handi Champaran Butter Chicken",
     restaurant: "Royal Handi Darbar",
-    location: "Bailey Road, Danapur",
+    location: "Bailey Road, Patna",
     distance: "1.4 km",
     creator: "@foodieree",
-    price: "₹380",
+    price: "₹180",
     rating: "4.9",
     likes: "42.8K",
     image: "/images/hero_food_reel.jpg",
+    video: "https://assets.mixkit.co/videos/43098/43098-720.mp4",
     tags: ["HOT DISPATCH", "Handi Clay Pot"],
-    instagramUrl: "https://www.instagram.com/foodieree/reels/?hl=en",
+    instagramUrl: "https://www.instagram.com/reel/DPjaUOeAP8M/?hl=en",
   },
   {
     id: "r2",
-    title: "Nawabi Dum Gosht Biryani",
+    title: "Nawabi Dum Chicken Biryani",
     restaurant: "Mughal Treat Kitchen",
     location: "Fraser Road, Patna",
     distance: "3.2 km",
     creator: "@foodieree",
-    price: "₹420",
+    price: "₹200",
     rating: "4.8",
     likes: "58.1K",
     image: "/images/biryani_feast.jpg",
+    video: "https://assets.mixkit.co/videos/43099/43099-720.mp4",
     tags: ["ROYAL FEAST", "Dum Handi"],
-    instagramUrl: "https://www.instagram.com/foodieree/reels/?hl=en",
+    instagramUrl: "https://www.instagram.com/reel/DPoT5VBE0oD/?hl=en",
   },
   {
     id: "r3",
     title: "Fire & Spice Pani Puri Splash",
     restaurant: "Gali No. 4 Street Cart",
-    location: "Boring Canal Road",
+    location: "Boring Canal Road, Patna",
     distance: "2.1 km",
     creator: "@foodieree",
     price: "₹60",
     rating: "4.9",
     likes: "36.4K",
     image: "/images/street_chaat.jpg",
+    video: "https://assets.mixkit.co/videos/42792/42792-720.mp4",
     tags: ["STREET LEGEND", "Spicy Mint"],
-    instagramUrl: "https://www.instagram.com/foodieree/reels/?hl=en",
+    instagramUrl: "https://www.instagram.com/reel/DPy5gk_gOK-/?hl=en",
   },
   {
     id: "r4",
@@ -55,12 +57,13 @@ const reelsData: ReelItem[] = [
     location: "Kankarbagh, Patna",
     distance: "4.8 km",
     creator: "@foodieree",
-    price: "₹140",
+    price: "₹120",
     rating: "4.8",
     likes: "29.7K",
     image: "/images/crispy_dosa.jpg",
+    video: "https://assets.mixkit.co/videos/43100/43100-720.mp4",
     tags: ["BREAKFAST HIT", "Ghee Roast"],
-    instagramUrl: "https://www.instagram.com/foodieree/reels/?hl=en",
+    instagramUrl: "https://www.instagram.com/reel/DQG8iQigIeb/?hl=en",
   },
   {
     id: "r5",
@@ -69,22 +72,29 @@ const reelsData: ReelItem[] = [
     location: "Raja Bazar, Patna",
     distance: "2.9 km",
     creator: "@foodieree",
-    price: "₹490",
+    price: "₹190",
     rating: "4.7",
     likes: "31.2K",
     image: "/images/artisan_pizza.jpg",
+    video: "https://assets.mixkit.co/videos/43224/43224-720.mp4",
     tags: ["ARTISANAL", "Wood-Fired"],
-    instagramUrl: "https://www.instagram.com/foodieree/reels/?hl=en",
+    instagramUrl: "https://www.instagram.com/reel/DP9efihk-3i/?hl=en",
   },
 ];
 
 export default function ReelsExperience() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [activeReelIndex, setActiveReelIndex] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const openReel = (index: number) => {
-    setActiveReelIndex(index);
-    setModalOpen(true);
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -340, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 340, behavior: "smooth" });
+    }
   };
 
   return (
@@ -100,7 +110,7 @@ export default function ReelsExperience() {
               </span>
               <span className="stamp-badge bg-[#047857] text-white border-transparent flex items-center gap-1">
                 <Play className="w-3 h-3 fill-current" />
-                Tap to Play on Website
+                Plays Instantly On Card
               </span>
             </div>
             <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-black text-[#12100E] tracking-tight leading-[1.1]">
@@ -110,52 +120,45 @@ export default function ReelsExperience() {
               </span>
             </h2>
             <p className="text-sm sm:text-base text-[#57524A] mt-2.5 font-medium leading-relaxed">
-              Watch 15-second authentic video reels live from sizzling woks and tandoors across Patna. Tap any card to play the full reel player right on the website!
+              Watch 15-second authentic video reels live from sizzling woks and tandoors across Patna. Scroll horizontally to explore all reels!
             </p>
           </div>
 
+          {/* Scroll Controls (Prev / Next Arrows) */}
           <div className="flex items-center gap-3">
             <button
-              onClick={() => openReel(0)}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#12100E] hover:bg-[#C22918] text-white font-mono text-xs font-bold uppercase tracking-wider shadow-[3px_3px_0px_#12100E] active:scale-95 transition-all cursor-pointer"
+              onClick={scrollLeft}
+              className="p-2.5 rounded-xl bg-white hover:bg-[#FAF7F0] text-[#12100E] border-2 border-[#12100E] shadow-[2.5px_2.5px_0px_#12100E] active:scale-95 transition-all cursor-pointer"
+              aria-label="Previous Reel"
             >
-              <Play className="w-3.5 h-3.5 fill-current" />
-              <span>Play All Reels</span>
+              <ArrowLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={scrollRight}
+              className="p-2.5 rounded-xl bg-[#12100E] hover:bg-[#C22918] text-white border-2 border-[#12100E] shadow-[2.5px_2.5px_0px_#12100E] active:scale-95 transition-all cursor-pointer"
+              aria-label="Next Reel"
+            >
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>
 
-        {/* Mobile Swipe Hint */}
-        <div className="flex sm:hidden items-center justify-between text-xs font-mono text-[#736B5E] mb-3 px-1">
-          <span className="flex items-center gap-1.5 font-bold text-[#C22918]">
-            <Flame className="w-3.5 h-3.5 fill-[#C22918]" />
-            Tap card to watch reel
-          </span>
-          <span className="text-[11px] text-[#A8A196]">Scroll ↔</span>
-        </div>
-
-        {/* Responsive Grid on Desktop / Smooth Swipeable Carousel on Mobile */}
-        <div className="flex sm:grid overflow-x-auto sm:overflow-x-visible snap-x snap-mandatory sm:snap-none gap-4 sm:gap-6 pb-4 sm:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 no-scrollbar scroll-smooth">
-          {reelsData.map((reel, index) => (
+        {/* 4-Card Scrollable Carousel Track */}
+        <div
+          ref={scrollContainerRef}
+          className="flex overflow-x-auto snap-x snap-mandatory gap-4 sm:gap-6 pb-4 pt-1 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar scroll-smooth"
+        >
+          {reelsData.map((reel) => (
             <div
               key={reel.id}
-              className="w-[78vw] max-w-[290px] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-align-none"
+              className="w-[82vw] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 snap-start"
             >
               <InteractiveReelCard
                 reel={reel}
-                onOpenPlayer={() => openReel(index)}
               />
             </div>
           ))}
         </div>
-
-        {/* Fullscreen Interactive Reels Modal Player */}
-        <ReelsModalPlayer
-          reels={reelsData}
-          initialIndex={activeReelIndex}
-          isOpen={modalOpen}
-          onClose={() => setModalOpen(false)}
-        />
 
         {/* Restaurant Partner Video Reel Menu Business Callout */}
         <div className="mt-10 p-5 sm:p-6 rounded-xl bg-white border border-[#12100E] shadow-[4px_4px_0px_#12100E] flex flex-col md:flex-row items-center justify-between gap-5">

@@ -132,15 +132,15 @@ export default function RootLayout({
         ],
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "ROSHANBIHAR, BAILEY ROAD, D/C21/0, DANAPUR",
-          "addressLocality": "Danapur Bazar, Dinapur-Cum-Khagaul, Patna",
+          "streetAddress": "ROSHANBIHAR, BAILEY ROAD, D/C21/0",
+          "addressLocality": "Patna",
           "addressRegion": "Bihar",
           "postalCode": "801503",
           "addressCountry": "IN"
         },
         "founder": {
-          "@type": "Person",
-          "name": "Kanhaiya",
+          "@type": "Organization",
+          "name": "Team Foodieree",
           "affiliation": "Indian Institute of Technology (IIT) Patna"
         }
       },

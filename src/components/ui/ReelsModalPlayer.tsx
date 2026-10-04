@@ -52,19 +52,30 @@ export default function ReelsModalPlayer({
     setProgress(0);
   }, [initialIndex, isOpen]);
 
-  // Progress bar timer simulation when playing
+  // Sync video play/pause and mute state
   useEffect(() => {
-    if (!isOpen || !isPlaying) return;
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          return 0;
-        }
-        return prev + 1.2;
-      });
-    }, 100);
-    return () => clearInterval(interval);
-  }, [isOpen, isPlaying, currentIndex]);
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.play().catch(() => {});
+      } else {
+        videoRef.current.pause();
+      }
+    }
+  }, [isPlaying, currentIndex]);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = isMuted;
+    }
+  }, [isMuted]);
+
+  // Handle video progress update
+  const handleTimeUpdate = () => {
+    if (videoRef.current && videoRef.current.duration) {
+      const current = (videoRef.current.currentTime / videoRef.current.duration) * 100;
+      setProgress(current);
+    }
+  };
 
   // Keyboard navigation (Esc to close, Arrow keys to switch)
   useEffect(() => {
@@ -74,14 +85,19 @@ export default function ReelsModalPlayer({
       if (e.key === "ArrowRight" || e.key === "ArrowDown") {
         setCurrentIndex((prev) => (prev + 1) % reels.length);
         setProgress(0);
+        setIsPlaying(true);
       }
       if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
         setCurrentIndex((prev) => (prev - 1 + reels.length) % reels.length);
         setProgress(0);
+        setIsPlaying(true);
       }
       if (e.key === " ") {
         e.preventDefault();
         setIsPlaying((prev) => !prev);
+      }
+      if (e.key === "m" || e.key === "M") {
+        setIsMuted((prev) => !prev);
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -113,13 +129,27 @@ export default function ReelsModalPlayer({
     setIsPlaying(true);
   };
 
+  const togglePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play().catch(() => {});
+        setIsPlaying(true);
+      }
+    } else {
+      setIsPlaying((prev) => !prev);
+    }
+  };
+
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-2 sm:p-4">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-white/15 hover:bg-white/25 text-white transition-all cursor-pointer shadow-lg"
+          className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-white/15 hover:bg-white/25 text-white transition-all cursor-pointer shadow-lg active:scale-95"
           aria-label="Close Reels Player"
         >
           <X className="w-6 h-6" />
@@ -160,28 +190,39 @@ export default function ReelsModalPlayer({
             />
           </div>
 
-          {/* Sizzling Media Background Layer */}
+          {/* Real Video Layer with Fallback Poster */}
           <div
             className="absolute inset-0 z-0 cursor-pointer"
-            onClick={() => setIsPlaying(!isPlaying)}
+            onClick={togglePlayPause}
           >
-            <Image
-              src={currentReel.image}
-              alt={currentReel.title}
-              fill
-              priority
-              className={`object-cover object-center transition-transform duration-700 ${
-                isPlaying ? "scale-105" : "scale-100"
-              }`}
-            />
-
-            {/* Live Video Simulation / Sizzle Pulse Overlay */}
-            <div className="absolute inset-0 bg-radial from-transparent via-black/20 to-black/80 pointer-events-none" />
-
-            {/* Sizzle Steam Graphic Animation */}
-            {isPlaying && (
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.12),transparent_60%)] animate-pulse pointer-events-none" />
+            {currentReel.video ? (
+              <video
+                ref={videoRef}
+                src={currentReel.video}
+                poster={currentReel.image}
+                autoPlay
+                playsInline
+                loop
+                muted={isMuted}
+                onTimeUpdate={handleTimeUpdate}
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                className="w-full h-full object-cover object-center"
+              />
+            ) : (
+              <Image
+                src={currentReel.image}
+                alt={currentReel.title}
+                fill
+                priority
+                className={`object-cover object-center transition-transform duration-700 ${
+                  isPlaying ? "scale-105" : "scale-100"
+                }`}
+              />
             )}
+
+            {/* Dark Video Gradients */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-black/60 pointer-events-none" />
           </div>
 
           {/* Top Info Bar */}
@@ -191,28 +232,29 @@ export default function ReelsModalPlayer({
                 <Flame className="w-3 h-3 text-[#FF3B14] fill-current" />
                 <span>{currentReel.tags[0]}</span>
               </span>
-              <span className="px-2 py-0.5 rounded-full bg-emerald-600/90 text-white font-mono text-[9px] font-bold uppercase">
-                15S LIVE SIZZLE
+              <span className="px-2 py-0.5 rounded-full bg-emerald-600/90 text-white font-mono text-[9px] font-bold uppercase flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                <span>REAL LIVE REEL</span>
               </span>
             </div>
 
             {/* Sound Mute Toggle */}
             <button
               onClick={() => setIsMuted(!isMuted)}
-              className="p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:text-amber-300 transition-colors border border-white/20 cursor-pointer"
+              className="p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:text-amber-300 transition-colors border border-white/20 cursor-pointer active:scale-95"
               aria-label={isMuted ? "Unmute Sound" : "Mute Sound"}
             >
               {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 text-emerald-400" />}
             </button>
           </div>
 
-          {/* Center Play/Pause Overlay Indicator */}
+          {/* Center Play Indicator when Paused */}
           {!isPlaying && (
             <div
-              onClick={() => setIsPlaying(true)}
-              className="absolute inset-0 z-20 flex items-center justify-center cursor-pointer bg-black/30"
+              onClick={togglePlayPause}
+              className="absolute inset-0 z-20 flex items-center justify-center cursor-pointer bg-black/40 backdrop-blur-xs"
             >
-              <div className="w-16 h-16 rounded-full bg-white/90 text-black flex items-center justify-center shadow-2xl scale-110">
+              <div className="w-16 h-16 rounded-full bg-white/95 text-black flex items-center justify-center shadow-2xl scale-110">
                 <Play className="w-8 h-8 fill-current ml-1 text-[#12100E]" />
               </div>
             </div>
@@ -258,11 +300,11 @@ export default function ReelsModalPlayer({
 
             {/* Instagram Link */}
             <a
-              href="https://www.instagram.com/foodieree/reels/?hl=en"
+              href={currentReel.instagramUrl || "https://www.instagram.com/foodieree/reels/?hl=en"}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-1 cursor-pointer group"
-              title="Open in Instagram"
+              title="Open Reel in Instagram"
             >
               <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                 <ExternalLink className="w-4 h-4" />
@@ -307,9 +349,11 @@ export default function ReelsModalPlayer({
                 <ShoppingBag className="w-4 h-4" />
                 <span>Order on Customer App</span>
               </div>
-              <div className="flex items-center gap-1 font-black text-sm">
+              <div className="flex items-center gap-1.5 font-black text-sm">
                 <span>{currentReel.price}</span>
-                <span className="text-[9.5px] px-1.5 py-0.5 rounded bg-black/30 font-normal">₹0 FEE</span>
+                <span className="text-[8.5px] px-2 py-0.5 rounded bg-black/40 font-bold text-emerald-300">
+                  0% Delivery Fee • 0% Platform Fee
+                </span>
               </div>
             </a>
           </div>

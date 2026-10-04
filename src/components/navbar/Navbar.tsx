@@ -13,7 +13,7 @@ interface NavItem {
 
 const navLinks: NavItem[] = [
   { name: "Food Reels", href: "/#reels" },
-  { name: "Get Apps", href: "/#downloads" },
+  { name: "Comparison", href: "/#ecosystem" },
   { name: "Our Story", href: "/#story" },
   { name: "FAQs", href: "/#faq" },
 ];
@@ -121,19 +121,19 @@ export default function Navbar() {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between">
                             <span className="font-sans text-xs font-bold text-[#12100E] group-hover/item:text-[#C22918] transition-colors">
-                              Food Lovers App
+                              Customer App
                             </span>
                             <span className="text-[8.5px] font-mono font-bold px-1.5 py-0.2 rounded bg-red-100 text-red-700">
                               PLAY STORE
                             </span>
                           </div>
                           <p className="text-[11px] text-[#736B5E] truncate">
-                            15s Reels & ₹0 Delivery
+                            Food Ordering & Discovery
                           </p>
                         </div>
                       </a>
 
-                      {/* Vendor App */}
+                      {/* Restaurant Partner App */}
                       <a
                         href="https://play.google.com/store/apps/details?id=com.foodieree.vendor"
                         target="_blank"
@@ -146,19 +146,19 @@ export default function Navbar() {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between">
                             <span className="font-sans text-xs font-bold text-[#12100E] group-hover/item:text-[#047857] transition-colors">
-                              Vendor OS App
+                              Restaurant Partner App
                             </span>
                             <span className="text-[8.5px] font-mono font-bold px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800">
-                              0% CUTS
+                              0% COMMISSION
                             </span>
                           </div>
                           <p className="text-[11px] text-[#736B5E] truncate">
-                            Kitchen Video Menus & Orders
+                            Merchant & Kitchen Portal
                           </p>
                         </div>
                       </a>
 
-                      {/* Partner App */}
+                      {/* Delivery Partner App */}
                       <a
                         href="https://play.google.com/store/apps/details?id=com.foodieree.partner"
                         target="_blank"
@@ -171,14 +171,14 @@ export default function Navbar() {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between">
                             <span className="font-sans text-xs font-bold text-[#12100E] group-hover/item:text-amber-600 transition-colors">
-                              Partner / Rider App
+                              Delivery Partner App
                             </span>
                             <span className="text-[8.5px] font-mono font-bold px-1.5 py-0.2 rounded bg-amber-100 text-amber-800">
-                              DAILY UPI
+                              DAILY PAYOUTS
                             </span>
                           </div>
                           <p className="text-[11px] text-[#736B5E] truncate">
-                            10 KM Radar & Instant Payouts
+                            Fleet Logistics & Payouts
                           </p>
                         </div>
                       </a>

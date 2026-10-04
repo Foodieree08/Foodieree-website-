@@ -1,14 +1,14 @@
 import { UtensilsCrossed, Sparkles, Flame, Coffee, Pizza, Compass, MapPin, ChefHat } from "lucide-react";
 
 const tickerItems = [
-  { label: "HANDI CHAMPARAN MEAT & BIRYANI", icon: Flame, tag: "HOT DISPATCH" },
-  { label: "10 KM HYPER-LOCAL RADIUS", icon: Compass, tag: "PROXIMITY" },
-  { label: "CRISPY GHEE MASALA DOSA", icon: Sparkles, tag: "DAKSHIN SAGAR" },
-  { label: "WOOD-FIRED NEAPOLITAN PIZZA", icon: Pizza, tag: "GOURMET" },
-  { label: "STREET GOLGAPPA & CHAAT GALI", icon: UtensilsCrossed, tag: "STREET CULTURE" },
-  { label: "ARTISANAL SAFFRON KADAK CHAI", icon: Coffee, tag: "MORNING RITUAL" },
-  { label: "DANAPUR & PATNA CREATOR NETWORK", icon: ChefHat, tag: "CREATORS" },
-  { label: "20 MIN LIVE TRANSIT DELIVERY", icon: MapPin, tag: "SWIFT" },
+  { label: "HANDI CHAMPARAN AHUNA MUTTON", icon: Flame, tag: "HOT DISPATCH" },
+  { label: "10 KM HYPER-LOCAL RADIUS", icon: Compass, tag: "EXPRESS TRANSIT" },
+  { label: "CRISPY GHEE MASALA DOSA", icon: Sparkles, tag: "SOUTH INDIAN" },
+  { label: "WOOD-FIRED NEAPOLITAN PIZZA", icon: Pizza, tag: "ARTISANAL" },
+  { label: "PURANI DILLI STREET CHAAT", icon: UtensilsCrossed, tag: "STREET CULTURE" },
+  { label: "AUTHENTIC BIHAR LITTI CHOKHA", icon: Flame, tag: "HERITAGE" },
+  { label: "PATNA & BIHAR CREATOR NETWORK", icon: ChefHat, tag: "CREATORS" },
+  { label: "KOLKATA SPICED KATHI ROLL", icon: Coffee, tag: "SAVORY SNACK" },
 ];
 
 export default function BrandTicker() {

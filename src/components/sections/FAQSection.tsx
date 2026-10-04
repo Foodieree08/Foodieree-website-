@@ -31,7 +31,7 @@ const faqs: FAQItem[] = [
   {
     question: "Do food creators and reviewers earn money?",
     answer:
-      "Yes! Foodieree features a built-in creator monetization economy. Whenever a food blogger or foodie uploads a verified 15-second food reel that leads directly to orders, they earn direct cash commissions on every order generated.",
+      "Yes! Foodieree features a dedicated creator monetization program. Food creators and vloggers earn up to 2% commission on every dish ordered directly through their authentic 15-second food reels.",
     tag: "Creator Monetization"
   },
   {
@@ -43,7 +43,7 @@ const faqs: FAQItem[] = [
   {
     question: "Where is Foodieree available?",
     answer:
-      "Foodieree was founded in Danapur, Patna (Bihar) and is actively operating and scaling across Bihar and top Indian culinary hubs.",
+      "Foodieree was founded in Patna (Bihar) and is actively operating and scaling across Bihar and top Indian culinary hubs.",
     tag: "Availability"
   }
 ];

@@ -2,11 +2,10 @@ import Navbar from "@/components/navbar/Navbar";
 import Hero from "@/components/hero/Hero";
 import BrandTicker from "@/components/sections/BrandTicker";
 import ReelsExperience from "@/components/sections/ReelsExperience";
-import AppDownloadSuite from "@/components/sections/AppDownloadSuite";
+import ScrollTriPartyShowcase from "@/components/sections/ScrollTriPartyShowcase";
 import Ecosystem from "@/components/sections/Ecosystem";
 import FasterCapitalIncubation from "@/components/sections/FasterCapitalIncubation";
 import FAQSection from "@/components/sections/FAQSection";
-import CompanyInfo from "@/components/sections/CompanyInfo";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
 
@@ -26,20 +25,17 @@ export default function Home() {
         {/* 3. 15-Second Food Reels Discovery */}
         <ReelsExperience />
 
-        {/* 4. App Download Suite & Official Social Channels */}
-        <AppDownloadSuite />
+        {/* 4. Full Scroll-Driven Animation (0% Delivery Fee -> 0% Platform Fee -> Up to 2% Creators) */}
+        <ScrollTriPartyShowcase />
 
         {/* 5. Comparison Matrix & Hyperlocal Edge */}
         <Ecosystem />
 
-        {/* 5. The Foodieree Story: Founder IIT Patna & FasterCapital Incubation */}
+        {/* 6. The Foodieree Story: Founder IIT Patna & FasterCapital Incubation */}
         <FasterCapitalIncubation />
 
-        {/* 6. Frequently Asked Questions */}
+        {/* 7. Frequently Asked Questions */}
         <FAQSection />
-
-        {/* 7. Corporate Gazette & CIN Record */}
-        <CompanyInfo />
 
         {/* 8. Call to Action */}
         <FinalCTA />

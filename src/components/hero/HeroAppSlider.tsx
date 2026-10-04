@@ -39,8 +39,8 @@ interface AppSlide {
 const slides: AppSlide[] = [
   {
     id: "user",
-    tabLabel: "Food Lovers",
-    badge: "01 • USER APP",
+    tabLabel: "Customer App",
+    badge: "01 • CUSTOMER APP",
     icon: Smartphone,
     accentColor: "#C22918",
     headline: "Watch 15s Sizzling Reels. Crave & Order Instantly.",
@@ -56,14 +56,14 @@ const slides: AppSlide[] = [
       title: "Handi Butter Chicken",
       subtitle: "Royal Handi Darbar • 1.4 km",
       image: "/images/hero_food_reel.jpg",
-      stat: "₹380 • 20 mins delivery",
+      stat: "₹180 • 20 mins delivery",
       badgeText: "🔥 42.8k Likes"
     }
   },
   {
     id: "restaurant",
-    tabLabel: "Restaurants",
-    badge: "02 • RESTAURANT PARTNER",
+    tabLabel: "Restaurant Partner App",
+    badge: "02 • RESTAURANT PARTNER APP",
     icon: Store,
     accentColor: "#047857",
     headline: "Turn Short Video Reels into High Daily Orders.",
@@ -77,7 +77,7 @@ const slides: AppSlide[] = [
     ctaHref: "#ecosystem",
     mockup: {
       title: "Grand Darbar Kitchen",
-      subtitle: "Danapur Bailey Road, Patna",
+      subtitle: "Bailey Road, Patna",
       image: "/images/restaurant_chef.jpg",
       stat: "₹38,450 Revenue • 84 Orders",
       badgeText: "● Live & Accepting"
@@ -85,8 +85,8 @@ const slides: AppSlide[] = [
   },
   {
     id: "rider",
-    tabLabel: "Delivery Riders",
-    badge: "03 • DELIVERY PARTNER",
+    tabLabel: "Delivery Partner App",
+    badge: "03 • DELIVERY PARTNER APP",
     icon: Bike,
     accentColor: "#D97706",
     headline: "Short Local Routes. Maximum Daily Earnings.",

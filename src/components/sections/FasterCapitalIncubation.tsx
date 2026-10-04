@@ -46,7 +46,7 @@ export default function FasterCapitalIncubation() {
             </h2>
 
             <p className="text-base sm:text-lg text-[#57524A] mt-3 font-medium leading-relaxed">
-              Foodieree was founded in Danapur, Patna to celebrate authentic regional recipes, bustling street carts, and honest neighborhood kitchens overlooked by legacy delivery apps—now officially accepted into FasterCapital&apos;s global incubation portfolio.
+              Foodieree was founded in Patna, Bihar to celebrate authentic regional recipes, bustling street carts, and honest neighborhood kitchens overlooked by legacy delivery apps—now officially accepted into FasterCapital&apos;s global incubation portfolio.
             </p>
           </div>
 
@@ -104,64 +104,64 @@ export default function FasterCapitalIncubation() {
 
         {/* Unified 2-Column Founder & Genesis Story Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          {/* Left Column: Founder Profile (Kanhaiya • IIT Patna) */}
+          {/* Left Column: Team Profile (Founding Team • IIT Patna Ecosystem) */}
           <div className="lg:col-span-5 rounded-2xl bg-white border-2 border-[#12100E] p-6 sm:p-8 shadow-[5px_5px_0px_#12100E] flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-[#EDE6D8]">
                 <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#736B5E] flex items-center gap-1.5">
-                  <GraduationCap className="w-4 h-4 text-[#C22918]" />
-                  <span>Founder & Leadership</span>
+                  <Users className="w-4 h-4 text-[#C22918]" />
+                  <span>Founding Team & Leadership</span>
                 </span>
                 <span className="px-2 py-0.5 rounded bg-[#FAF7F0] border border-[#D6CEC1] text-[#047857] font-mono text-[10px] font-bold">
-                  IIT Patna Innovator
+                  IIT Patna Ecosystem
                 </span>
               </div>
 
-              {/* Founder Header */}
+              {/* Team Header */}
               <div className="flex items-center gap-4 mb-5">
-                <div className="w-14 h-14 rounded-2xl bg-[#12100E] text-white flex items-center justify-center font-editorial font-black text-2xl border-2 border-[#12100E] shadow-[3px_3px_0px_#C22918] shrink-0">
-                  K
+                <div className="w-14 h-14 rounded-2xl bg-[#12100E] text-white flex items-center justify-center border-2 border-[#12100E] shadow-[3px_3px_0px_#C22918] shrink-0">
+                  <Users className="w-7 h-7 text-amber-400" />
                 </div>
                 <div>
                   <h4 className="font-editorial text-2xl font-black text-[#12100E]">
-                    Kanhaiya
+                    Team Foodieree
                   </h4>
                   <p className="text-xs font-mono font-bold text-[#C22918]">
-                    Founder, Foodieree • Student at IIT Patna
+                    Founders, Engineers & Operators • IIT Patna
                   </p>
                 </div>
               </div>
 
-              {/* Founder Bio */}
+              {/* Team Mission Statement */}
               <blockquote className="p-4 rounded-xl bg-[#FAF7F0] border-l-4 border-[#047857] text-xs sm:text-sm text-[#4A453E] leading-relaxed mb-5 font-sans">
-                &ldquo;I&apos;m a student at <strong>IIT Patna</strong> and the founder of Foodieree, a hyperlocal food discovery and ordering platform designed to transform how people explore and experience food around them by bridging the gap between what people see online and what they can eat nearby, with a vision to blend technology, creativity, and everyday life to empower the next billion users.&rdquo;
+                &ldquo;We are a multidisciplinary team of student innovators and engineers from <strong>IIT Patna</strong> building Foodieree — a hyperlocal food discovery and ordering ecosystem designed to bridge short-form culinary storytelling with seamless neighborhood dining and doorstep delivery.&rdquo;
               </blockquote>
 
               {/* Key Highlights */}
               <div className="space-y-2 text-xs font-mono text-[#2E2A24]">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#047857] shrink-0" />
-                  <span>Student Innovator at Indian Institute of Technology (IIT) Patna</span>
+                  <span>Student Innovators & Technologists at IIT Patna</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#047857] shrink-0" />
-                  <span>Previously founded FreeHydr8 (brand-sponsored campus distribution)</span>
+                  <span>Full-Stack Engineering, AI Discovery & Logistics Expertise</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#047857] shrink-0" />
-                  <span>Selected into FasterCapital Global Acceleration & Co-Founding</span>
+                  <span>Accelerated & Incubation-Backed by FasterCapital</span>
                 </div>
               </div>
             </div>
 
             <div className="pt-5 mt-5 border-t border-[#EDE6D8]">
               <a
-                href="https://fastercapital.com/entrepreneur/kanhaiya.html"
+                href="https://fastercapital.com/incubation-pending/foodieree.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#047857] hover:text-[#064E3B] hover:underline"
               >
-                <span>Read Founder Profile on FasterCapital</span>
+                <span>Read Venture Profile on FasterCapital</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
