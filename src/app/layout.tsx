@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://foodieree.com"),
+  metadataBase: new URL("https://www.foodieree.com"),
   title: {
     default: "Foodieree — Hyperlocal Food Discovery & 15s Sizzle Video Reels | ₹0 Platform Fee",
     template: "%s | Foodieree",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     "Food Creator Monetization",
   ],
   authors: [
-    { name: "Foodieree Technologies Private Limited", url: "https://foodieree.com" },
+    { name: "Foodieree Technologies Private Limited", url: "https://www.foodieree.com" },
   ],
   creator: "Foodieree Technologies Private Limited",
   publisher: "Foodieree Technologies Private Limited",
@@ -86,13 +86,13 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   alternates: {
-    canonical: "https://foodieree.com",
+    canonical: "https://www.foodieree.com",
   },
   openGraph: {
     title: "Foodieree — Hyperlocal Food Discovery & 15s Sizzle Video Reels",
     description:
       "Watch authentic 15-second video reels of sizzling woks and tandoors. Order with ₹0 Platform Fee and ₹0 Delivery Fee within 10 km.",
-    url: "https://foodieree.com",
+    url: "https://www.foodieree.com",
     siteName: "Foodieree",
     locale: "en_IN",
     type: "website",
@@ -145,13 +145,13 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://foodieree.com/#organization",
+        "@id": "https://www.foodieree.com/#organization",
         "name": "Foodieree Technologies Private Limited",
         "legalName": "FOODIEREE TECHNOLOGIES PRIVATE LIMITED",
-        "url": "https://foodieree.com",
+        "url": "https://www.foodieree.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://foodieree.com/android-chrome-512x512.png",
+          "url": "https://www.foodieree.com/android-chrome-512x512.png",
           "width": 512,
           "height": 512
         },
@@ -192,18 +192,18 @@ export default function RootLayout({
       },
       {
         "@type": "WebSite",
-        "@id": "https://foodieree.com/#website",
-        "url": "https://foodieree.com",
+        "@id": "https://www.foodieree.com/#website",
+        "url": "https://www.foodieree.com",
         "name": "Foodieree",
         "description": "Hyperlocal Food Discovery & 15-Second Sizzle Video Reels with ₹0 Platform Fee & ₹0 Delivery Fee",
         "publisher": {
-          "@id": "https://foodieree.com/#organization"
+          "@id": "https://www.foodieree.com/#organization"
         },
         "inLanguage": "en-IN"
       },
       {
         "@type": "SoftwareApplication",
-        "@id": "https://foodieree.com/#customer-app",
+        "@id": "https://www.foodieree.com/#customer-app",
         "name": "Foodieree Customer App",
         "operatingSystem": "Android",
         "applicationCategory": "LifestyleApplication",
@@ -217,7 +217,7 @@ export default function RootLayout({
       },
       {
         "@type": "FAQPage",
-        "@id": "https://foodieree.com/#faq",
+        "@id": "https://www.foodieree.com/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -273,11 +273,11 @@ export default function RootLayout({
         "@type": "SiteNavigationElement",
         "name": ["Food Reels", "Comparison", "Our Story", "FAQs", "Contact"],
         "url": [
-          "https://foodieree.com/#reels",
-          "https://foodieree.com/#ecosystem",
-          "https://foodieree.com/#story",
-          "https://foodieree.com/#faq",
-          "https://foodieree.com/contact"
+          "https://www.foodieree.com/#reels",
+          "https://www.foodieree.com/#ecosystem",
+          "https://www.foodieree.com/#story",
+          "https://www.foodieree.com/#faq",
+          "https://www.foodieree.com/contact"
         ]
       }
     ]

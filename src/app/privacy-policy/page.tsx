@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Official Privacy Policy of Foodieree Technologies Private Limited describing policies and procedures on collection, use, processing, and protection of user information.",
   alternates: {
-    canonical: "https://foodieree.com/privacy-policy",
+    canonical: "https://www.foodieree.com/privacy-policy",
   },
   openGraph: {
     title: "Privacy Policy | Foodieree",
     description:
       "Official Privacy Policy of Foodieree Technologies Private Limited.",
-    url: "https://foodieree.com/privacy-policy",
+    url: "https://www.foodieree.com/privacy-policy",
     siteName: "Foodieree",
     type: "article",
   },

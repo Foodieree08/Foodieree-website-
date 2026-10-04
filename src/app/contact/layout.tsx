@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     "Get in touch with Foodieree Technologies. Reach our team for restaurant partner onboarding, creator collaborations, delivery rider partnerships, or customer assistance.",
   alternates: {
-    canonical: "https://foodieree.com/contact",
+    canonical: "https://www.foodieree.com/contact",
   },
   openGraph: {
     title: "Contact Us & Partner Inquiries | Foodieree",
     description:
       "Connect with the Foodieree team in Patna. Partner as a restaurant kitchen, food creator, or delivery rider.",
-    url: "https://foodieree.com/contact",
+    url: "https://www.foodieree.com/contact",
     type: "website",
     siteName: "Foodieree",
     images: [
@@ -41,7 +41,7 @@ export default function ContactLayout({
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Foodieree Contact & Partner Inquiries",
-    "url": "https://foodieree.com/contact",
+    "url": "https://www.foodieree.com/contact",
     "description":
       "Contact page for Foodieree customer support, restaurant partnerships, creator collaborations, and delivery riders.",
     "mainEntity": {
@@ -65,13 +65,13 @@ export default function ContactLayout({
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://foodieree.com"
+          "item": "https://www.foodieree.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Contact Us",
-          "item": "https://foodieree.com/contact"
+          "item": "https://www.foodieree.com/contact"
         }
       ]
     }
