@@ -50,13 +50,13 @@ const slides: AppSlide[] = [
       "1-Tap Instant Craving Checkout directly from the video reel",
       "Discover & support verified local food creators across your city"
     ],
-    ctaText: "Explore Food Reels",
-    ctaHref: "#reels",
+    ctaText: "Get Customer App on Play Store",
+    ctaHref: "https://play.google.com/store/apps/details?id=com.foodieree.customer",
     mockup: {
       title: "Handi Butter Chicken",
       subtitle: "Royal Handi Darbar • 1.4 km",
       image: "/images/hero_food_reel.jpg",
-      stat: "₹180 • 20 mins delivery",
+      stat: "₹180 • Express Hot Arrival",
       badgeText: "🔥 42.8k Likes"
     }
   },
@@ -73,8 +73,8 @@ const slides: AppSlide[] = [
       "Automated Kitchen Queue & Live Dispatch Management",
       "Same-Day Revenue Settlements & Transparent Daily Analytics"
     ],
-    ctaText: "Partner Your Kitchen",
-    ctaHref: "#ecosystem",
+    ctaText: "Get Restaurant Partner App",
+    ctaHref: "https://play.google.com/store/apps/details?id=com.foodieree.vendor",
     mockup: {
       title: "Grand Darbar Kitchen",
       subtitle: "Bailey Road, Patna",
@@ -96,13 +96,13 @@ const slides: AppSlide[] = [
       "Daily Instant UPI Transfers with peak & monsoon bonus multipliers",
       "Comprehensive Partner Accident Insurance & zero kitchen wait times"
     ],
-    ctaText: "Ride With Foodieree",
-    ctaHref: "#ecosystem",
+    ctaText: "Get Delivery Partner App",
+    ctaHref: "https://play.google.com/store/apps/details?id=com.foodieree.partner",
     mockup: {
       title: "Active Delivery Leg",
       subtitle: "Royal Handi → Bailey Road",
       image: "/images/biryani_feast.jpg",
-      stat: "₹78 Payout • ETA: 5 mins",
+      stat: "₹78 Payout • Express Route",
       badgeText: "⚡ Smart Navigation"
     }
   }
@@ -243,6 +243,8 @@ export default function HeroAppSlider() {
             <div>
               <a
                 href={slide.ctaHref}
+                target={slide.ctaHref.startsWith("http") ? "_blank" : undefined}
+                rel={slide.ctaHref.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="inline-flex items-center justify-center w-full sm:w-auto gap-2 px-5 sm:px-6 py-3 rounded-lg text-white font-mono text-xs font-black uppercase tracking-wider shadow-[3px_3px_0px_#12100E] border border-[#12100E] active:scale-95 transition-all"
                 style={{ backgroundColor: slide.accentColor }}
               >
