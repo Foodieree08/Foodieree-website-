@@ -19,7 +19,7 @@ const faqs: FAQItem[] = [
   {
     question: "How does the ₹0 Platform Fee & ₹0 Delivery Fee work?",
     answer:
-      "Unlike traditional aggregators that charge 25% to 35% predatory commissions and heavy delivery surcharges, Foodieree offers zero platform setup fees for partner kitchens and zero delivery fee structures on hyper-local 10 km runs, ensuring restaurants keep their hard-earned profits and customers get piping-hot food at true menu prices.",
+      "Unlike traditional aggregators that charge sneaky platform fees and heavy delivery surcharges to customers, Foodieree provides ₹0 Platform Fee and ₹0 Delivery Fee for users, ensuring you pay only for your food with zero hidden markups.",
     tag: "Zero-Fee Economics"
   },
   {

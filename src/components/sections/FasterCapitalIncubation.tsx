@@ -196,27 +196,6 @@ export default function FasterCapitalIncubation() {
                 </p>
               </div>
             </div>
-
-            {/* 3 Core Value Pillars */}
-            <div className="pt-4 border-t border-[#EDE6D8] grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
-              <div className="p-3 rounded-xl bg-[#FAF7F0] border border-[#D6CEC1]">
-                <div className="text-[10px] text-[#736B5E] uppercase font-bold">PLATFORM FEE</div>
-                <div className="font-editorial text-lg font-black text-[#047857]">₹0 Free</div>
-                <div className="text-[10.5px] text-[#57524A] mt-0.5">0% predatory aggregator cuts</div>
-              </div>
-
-              <div className="p-3 rounded-xl bg-[#FAF7F0] border border-[#D6CEC1]">
-                <div className="text-[10px] text-[#736B5E] uppercase font-bold">DELIVERY RADAR</div>
-                <div className="font-editorial text-lg font-black text-[#047857]">₹0 Delivery</div>
-                <div className="text-[10.5px] text-[#57524A] mt-0.5">Strict 10 KM hot express radar</div>
-              </div>
-
-              <div className="p-3 rounded-xl bg-[#FAF7F0] border border-[#D6CEC1]">
-                <div className="text-[10px] text-[#736B5E] uppercase font-bold">CREATOR SHARING</div>
-                <div className="font-editorial text-lg font-black text-[#C22918]">Direct Cash</div>
-                <div className="text-[10.5px] text-[#57524A] mt-0.5">Earn commissions on reel orders</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

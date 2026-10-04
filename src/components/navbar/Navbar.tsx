@@ -16,6 +16,7 @@ const navLinks: NavItem[] = [
   { name: "Comparison", href: "/#ecosystem" },
   { name: "Our Story", href: "/#story" },
   { name: "FAQs", href: "/#faq" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {

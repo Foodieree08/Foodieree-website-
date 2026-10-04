@@ -121,7 +121,7 @@ export default function IndianFoodCulture() {
                 Hyper-Local & Uncompromisingly Fresh
               </h4>
               <p>
-                We enforce a strict 10 km hyper-local radar. By keeping radius tight, orders travel in under 20 minutes from the pan to your plate. Food arrives piping hot, riders make quick manageable runs, and local culinary culture thrives without middlemen penalties.
+                We enforce a strict 10 km hyper-local radar. By keeping radius tight, orders travel quickly and safely from the pan to your plate. Food arrives piping hot, riders make manageable runs, and local culinary culture thrives without middlemen penalties.
               </p>
               <p className="text-xs sm:text-sm text-[#736B5E] font-medium">
                 Fair economics, honest discovery, and pure local passion. That is who we are.

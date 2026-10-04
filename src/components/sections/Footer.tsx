@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { MapPin } from "lucide-react";
+import FoodiereeLogo from "@/components/ui/FoodiereeLogo";
 
 export default function Footer() {
   return (
@@ -10,18 +10,12 @@ export default function Footer() {
           
           {/* Column 1: Brand, Tagline, Follow Us & Download App */}
           <div className="lg:col-span-5 flex flex-col space-y-6">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group w-fit">
-              <div className="relative w-10 h-10 rounded-2xl overflow-hidden bg-white/10 border border-white/20 p-1 flex items-center justify-center">
-                <Image
-                  src="/images/logo.jpg"
-                  alt="Foodieree Logo"
-                  width={36}
-                  height={36}
-                  className="object-contain"
-                />
+            {/* Logo without white background */}
+            <Link href="/" className="flex items-center gap-3.5 group w-fit">
+              <div className="shrink-0 group-hover:scale-105 transition-transform">
+                <FoodiereeLogo size={42} />
               </div>
-              <span className="text-2xl font-black tracking-tight text-white font-sans">
+              <span className="text-2xl sm:text-[26px] font-black tracking-tight text-white font-sans">
                 foodieree
               </span>
             </Link>
@@ -120,35 +114,39 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Our Address */}
-          <div className="lg:col-span-4 flex flex-col space-y-4">
+          <div className="lg:col-span-4 flex flex-col space-y-7">
             <div className="w-fit">
               <h4 className="text-lg font-bold text-white tracking-tight">
                 Our Address
               </h4>
-              <div className="w-12 h-1 bg-[#f43f5e] mt-1.5 rounded-full" />
+              <div className="w-12 h-1 bg-[#f43f5e] mt-2.5 rounded-full" />
             </div>
 
-            <div className="flex items-start gap-4 pt-2">
-              <div className="w-10 h-10 rounded-xl bg-[#1e293b] border border-[#38bdf8]/30 flex items-center justify-center shrink-0 text-[#38bdf8] mt-0.5 shadow-sm">
+            <div className="flex items-start gap-5 pt-4">
+              <div className="w-11 h-11 rounded-xl bg-[#1e293b] border border-[#38bdf8]/30 flex items-center justify-center shrink-0 text-[#38bdf8] mt-1 shadow-sm">
                 <MapPin className="w-5 h-5" />
               </div>
 
-              <div className="space-y-2 text-xs leading-relaxed text-[#d4d4d8]">
-                <p className="text-sm font-bold text-white tracking-tight">
-                  FOODIEREE TECHNOLOGIES PRIVATE LIMITED
-                </p>
-                <p className="text-[11px] text-[#a1a1aa] font-mono">
-                  CIN: U63120BR2026PTC084565
-                </p>
-                <div className="space-y-1 text-[#d4d4d8]">
-                  <p>ROSHANBIHAR, BAILEY ROAD, D/C21/0,</p>
-                  <p>Patna – 801503,</p>
-                  <p>Bihar, India</p>
+              <div className="space-y-6 text-xs leading-relaxed text-[#d4d4d8]">
+                <div className="space-y-3 pb-3">
+                  <p className="text-sm sm:text-[15px] font-bold text-white tracking-wider leading-relaxed">
+                    FOODIEREE TECHNOLOGIES PRIVATE LIMITED
+                  </p>
+                  <p className="text-[11px] text-[#a1a1aa] font-mono tracking-widest pt-1">
+                    CIN: U63120BR2026PTC084565
+                  </p>
                 </div>
-                <div className="pt-2">
+
+                <div className="space-y-2.5 text-[#d4d4d8] pt-4 border-t border-white/10">
+                  <p className="font-normal leading-relaxed">Roshanbihar, Bailey Road, D/C21/0,</p>
+                  <p className="font-normal leading-relaxed">Danapur, Danapur Bazar, Dinapur-cum-Khagaul,</p>
+                  <p className="font-normal leading-relaxed">Patna, Bihar, India – 801503</p>
+                </div>
+
+                <div className="pt-5 border-t border-white/10">
                   <a
                     href="mailto:info@foodieree.com"
-                    className="text-white hover:text-[#38bdf8] transition-colors block text-xs font-medium"
+                    className="text-[#38bdf8] hover:text-white transition-colors inline-block text-xs font-semibold font-mono tracking-wider"
                   >
                     info@foodieree.com
                   </a>
@@ -168,12 +166,12 @@ export default function Footer() {
 
             <ul className="space-y-3 text-xs text-[#d4d4d8] pt-2">
               <li>
-                <a
-                  href="mailto:info@foodieree.com"
+                <Link
+                  href="/contact"
                   className="hover:text-white transition-colors block"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
                 <Link

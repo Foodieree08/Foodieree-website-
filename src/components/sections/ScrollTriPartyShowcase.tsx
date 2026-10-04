@@ -1,6 +1,6 @@
 "use client";
 
-import { Bike, Store, Video, ArrowRight } from "lucide-react";
+import { Bike, Sparkles, Video, ArrowRight } from "lucide-react";
 
 interface PillarCard {
   id: string;
@@ -24,12 +24,12 @@ interface PillarCard {
 
 const pillars: PillarCard[] = [
   {
-    id: "diners",
+    id: "delivery",
     stepNum: "01",
-    tag: "FOR DINERS",
+    tag: "FOR USERS",
     badge: "FREE DELIVERY",
     title: "0% Delivery Fee",
-    oneLiner: "Zero hidden surcharges. What you see is what you pay at checkout.",
+    oneLiner: "Zero delivery surge charges for users. What you see is what you pay at checkout.",
     bgClass: "bg-[#047857]",
     textColor: "text-white",
     subtextColor: "text-emerald-100",
@@ -43,12 +43,12 @@ const pillars: PillarCard[] = [
     icon: Bike,
   },
   {
-    id: "restaurants",
+    id: "platform-fee",
     stepNum: "02",
-    tag: "FOR RESTAURANTS",
-    badge: "100% PROFIT",
+    tag: "FOR USERS",
+    badge: "ZERO PLATFORM CHARGE",
     title: "0% Platform Fee",
-    oneLiner: "Keep 100% of your earnings. No 30% predatory aggregator cuts.",
+    oneLiner: "0% platform fee for users. No sneaky packaging fees or hidden service taxes.",
     bgClass: "bg-[#C22918]",
     textColor: "text-white",
     subtextColor: "text-red-100",
@@ -57,17 +57,17 @@ const pillars: PillarCard[] = [
     btnBg: "bg-white text-[#12100E] hover:bg-red-50",
     btnText: "text-[#12100E]",
     btnBorder: "border-[#12100E]",
-    btnLink: "https://play.google.com/store/apps/details?id=com.foodieree.vendor",
-    btnLabel: "PARTNER KITCHEN",
-    icon: Store,
+    btnLink: "https://play.google.com/store/apps/details?id=com.foodieree.customer",
+    btnLabel: "GET APP",
+    icon: Sparkles,
   },
   {
     id: "creators",
     stepNum: "03",
     tag: "FOR CREATORS",
-    badge: "REEL ROYALTIES",
-    title: "Up to 2% Per Order",
-    oneLiner: "Earn automated royalties on every video reel order from your reviews.",
+    badge: "REEL COMMISSION",
+    title: "Up to 2% Per Order Commission",
+    oneLiner: "Earn up to 2% commission every time a customer orders food directly from your created video reel.",
     bgClass: "bg-[#FFB800]",
     textColor: "text-[#12100E]",
     subtextColor: "text-[#422C00]",
@@ -76,8 +76,8 @@ const pillars: PillarCard[] = [
     btnBg: "bg-[#12100E] text-white hover:bg-[#2A241E]",
     btnText: "text-white",
     btnBorder: "border-[#12100E]",
-    btnLink: "https://www.instagram.com/foodieree/reels/?hl=en",
-    btnLabel: "JOIN CREATORS",
+    btnLink: "https://play.google.com/store/apps/details?id=com.foodieree.customer",
+    btnLabel: "ORDER FROM REEL",
     icon: Video,
   },
 ];
@@ -114,7 +114,7 @@ export default function ScrollTriPartyShowcase() {
                   </div>
 
                   {/* Big Text Title */}
-                  <h3 className={`font-editorial text-4xl sm:text-5xl xl:text-6xl font-black tracking-tight leading-[1.04] mb-3 ${card.textColor}`}>
+                  <h3 className={`font-editorial text-3xl sm:text-4xl xl:text-5xl font-black tracking-tight leading-[1.06] mb-3 ${card.textColor}`}>
                     {card.title}
                   </h3>
 
@@ -131,7 +131,7 @@ export default function ScrollTriPartyShowcase() {
                       <IconComponent className={`w-4 h-4 ${card.textColor}`} />
                     </div>
                     <span className={`text-[11px] font-mono font-bold uppercase ${card.textColor} opacity-80`}>
-                      Verified Standard
+                      Foodieree Advantage
                     </span>
                   </div>
 

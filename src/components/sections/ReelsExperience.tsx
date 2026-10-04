@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
 import InteractiveReelCard, { ReelItem } from "@/components/ui/InteractiveReelCard";
-import { ArrowLeft, ArrowRight, Flame, Store, Play } from "lucide-react";
+import { ArrowRight, Flame, Store, Play } from "lucide-react";
 
 const reelsData: ReelItem[] = [
   {
@@ -83,20 +82,6 @@ const reelsData: ReelItem[] = [
 ];
 
 export default function ReelsExperience() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -340, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 340, behavior: "smooth" });
-    }
-  };
-
   return (
     <section id="reels" className="py-14 sm:py-20 bg-[#F7F3EB] border-b-2 border-[#12100E] relative overflow-hidden">
       <div className="w-full max-w-[1700px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
@@ -120,38 +105,30 @@ export default function ReelsExperience() {
               </span>
             </h2>
             <p className="text-sm sm:text-base text-[#57524A] mt-2.5 font-medium leading-relaxed">
-              Watch 15-second authentic video reels live from sizzling woks and tandoors across Patna. Scroll horizontally to explore all reels!
+              Watch 15-second authentic video reels live from sizzling woks and tandoors across Patna. Hover or tap any card to play directly in-place!
             </p>
           </div>
 
-          {/* Scroll Controls (Prev / Next Arrows) */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={scrollLeft}
-              className="p-2.5 rounded-xl bg-white hover:bg-[#FAF7F0] text-[#12100E] border-2 border-[#12100E] shadow-[2.5px_2.5px_0px_#12100E] active:scale-95 transition-all cursor-pointer"
-              aria-label="Previous Reel"
-            >
-              <ArrowLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={scrollRight}
-              className="p-2.5 rounded-xl bg-[#12100E] hover:bg-[#C22918] text-white border-2 border-[#12100E] shadow-[2.5px_2.5px_0px_#12100E] active:scale-95 transition-all cursor-pointer"
-              aria-label="Next Reel"
-            >
-              <ArrowRight className="w-4 h-4" />
-            </button>
+          <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#047857] bg-emerald-50 border border-emerald-300 px-3.5 py-2 rounded-lg">
+            <span>🔥 TAP OR HOVER TO STREAM ↘</span>
           </div>
         </div>
 
-        {/* 4-Card Scrollable Carousel Track */}
-        <div
-          ref={scrollContainerRef}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-4 sm:gap-6 pb-4 pt-1 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar scroll-smooth"
-        >
+        {/* Mobile Swipe Hint */}
+        <div className="flex sm:hidden items-center justify-between text-xs font-mono text-[#736B5E] mb-3 px-1">
+          <span className="flex items-center gap-1.5 font-bold text-[#C22918]">
+            <Flame className="w-3.5 h-3.5 fill-[#C22918]" />
+            Tap card to play video
+          </span>
+          <span className="text-[11px] text-[#A8A196]">Scroll ↔</span>
+        </div>
+
+        {/* Responsive Grid on Desktop / Smooth Swipeable Carousel on Mobile */}
+        <div className="flex sm:grid overflow-x-auto sm:overflow-x-visible snap-x snap-mandatory sm:snap-none gap-4 sm:gap-6 pb-4 sm:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 no-scrollbar scroll-smooth">
           {reelsData.map((reel) => (
             <div
               key={reel.id}
-              className="w-[82vw] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] shrink-0 snap-start"
+              className="w-[78vw] max-w-[290px] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-align-none"
             >
               <InteractiveReelCard
                 reel={reel}

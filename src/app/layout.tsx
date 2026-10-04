@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | Foodieree",
   },
   description:
-    "India's first hyperlocal video food discovery & ordering platform. Discover authentic dishes through 15-second cooking reels. ₹0 Platform Fee for Kitchens, ₹0 Delivery Fee for Diners.",
+    "India's first hyperlocal video food discovery & ordering platform. Discover authentic dishes through 15-second cooking reels. ₹0 Platform Fee & ₹0 Delivery Fee for Users.",
   keywords: [
     "Foodieree",
     "Food Reels",
@@ -132,7 +132,7 @@ export default function RootLayout({
         ],
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "ROSHANBIHAR, BAILEY ROAD, D/C21/0",
+          "streetAddress": "Roshanbihar, Bailey Road, D/C21/0, Danapur, Danapur Bazar, Dinapur-cum-Khagaul",
           "addressLocality": "Patna",
           "addressRegion": "Bihar",
           "postalCode": "801503",

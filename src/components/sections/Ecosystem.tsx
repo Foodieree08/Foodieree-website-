@@ -178,10 +178,10 @@ export default function Ecosystem() {
                   </span>
                   <div>
                     <div className="flex items-center gap-2">
-                      <strong className="text-[#047857] text-[14px]">₹0 Platform Fee (0% Kitchen Cuts)</strong>
-                      <span className="px-1.5 py-0.2 rounded bg-[#047857] text-white text-[9px] font-mono font-bold">100% PROFIT</span>
+                      <strong className="text-[#047857] text-[14px]">₹0 Platform Fee (For All Users)</strong>
+                      <span className="px-1.5 py-0.2 rounded bg-[#047857] text-white text-[9px] font-mono font-bold">100% TRANSPARENT</span>
                     </div>
-                    <span className="text-[12px] text-[#2E2A24] font-medium">Restaurants, cloud kitchens & street vendors keep all their hard-earned profits.</span>
+                    <span className="text-[12px] text-[#2E2A24] font-medium">Zero platform surcharge and zero sneaky checkout fees for users.</span>
                   </div>
                 </div>
 
@@ -227,7 +227,7 @@ export default function Ecosystem() {
                   </span>
                   <div>
                     <strong className="text-[#12100E] block text-[13px]">Strict 10 KM Hot Express Radar</strong>
-                    <span className="text-[11.5px] text-[#57524A]">Guarantees your food arrives steaming hot and crisp in under 20 minutes.</span>
+                    <span className="text-[11.5px] text-[#57524A]">Guarantees your food arrives steaming hot and fresh directly from local kitchens.</span>
                   </div>
                 </div>
 
@@ -274,7 +274,7 @@ export default function Ecosystem() {
             </div>
 
             <span className="text-xs font-mono font-bold text-[#736B5E] hidden sm:inline">
-              UNDER 20 MINUTE DELIVERY ↘
+              HYPER-LOCAL EXPRESS ARRIVAL ↘
             </span>
           </div>
 
@@ -315,7 +315,7 @@ export default function Ecosystem() {
                 10 KM Express Arrival
               </h4>
               <p className="text-xs sm:text-sm text-[#57524A] leading-relaxed max-w-xs">
-                Hyper-local delivery captains navigate short routes to deliver your meal steaming hot in under 20 minutes.
+                Hyper-local delivery captains navigate short routes to deliver your meal steaming hot and fresh to your doorstep.
               </p>
             </div>
           </div>

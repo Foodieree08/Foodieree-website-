@@ -54,9 +54,9 @@ export default function CompanyInfo() {
 
                 <address className="not-italic font-mono text-xs sm:text-[13px] text-[#2E2A24] leading-relaxed">
                   <span className="font-bold text-[#12100E]">
-                    ROSHANBIHAR, BAILEY ROAD, D/C21/0, DANAPUR, PATNA,
+                    ROSHANBIHAR, BAILEY ROAD, D/C21/0,
                   </span>{" "}
-                  Danapur Bazar, Dinapur-Cum-Khagaul, Patna – 801503, Bihar, India.
+                  Danapur, Danapur Bazar, Dinapur-Cum-Khagaul, Patna – 801503, Bihar, India.
                 </address>
               </div>
 
