@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/" className="inline-block group w-fit">
               <div className="relative h-16 w-64 sm:h-20 sm:w-72 group-hover:scale-105 transition-transform origin-left">
                 <Image
-                  src="/Frame 129 (1).png"
+                  src="/images/footer-logo.png"
                   alt="FoodieRee"
                   fill
                   className="object-contain object-left"
