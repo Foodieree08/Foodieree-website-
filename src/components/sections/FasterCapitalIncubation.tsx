@@ -1,20 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
 import {
   ExternalLink,
-  ShieldCheck,
   Award,
-  Sparkles,
   TrendingUp,
-  DollarSign,
-  GraduationCap,
-  Users,
-  CheckCircle2,
-  HeartHandshake,
   ArrowRight,
   Flame,
   Globe2,
-  Quote
 } from "lucide-react";
 
 export default function FasterCapitalIncubation() {
@@ -97,103 +87,6 @@ export default function FasterCapitalIncubation() {
               <div className="flex items-center justify-center gap-2.5 px-5 py-3 rounded-full bg-black/30 border border-white/20 text-white font-mono text-xs">
                 <TrendingUp className="w-4 h-4 text-amber-300" />
                 <span>Target: <strong>$1,000K</strong> Capital Raising</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Unified 2-Column Founder & Genesis Story Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          {/* Left Column: Team Profile (Founding Team • IIT Patna Ecosystem) */}
-          <div className="lg:col-span-5 rounded-2xl bg-white border-2 border-[#12100E] p-6 sm:p-8 shadow-[5px_5px_0px_#12100E] flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-[#EDE6D8]">
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#736B5E] flex items-center gap-1.5">
-                  <Users className="w-4 h-4 text-[#C22918]" />
-                  <span>Founding Team & Leadership</span>
-                </span>
-                <span className="px-2 py-0.5 rounded bg-[#FAF7F0] border border-[#D6CEC1] text-[#047857] font-mono text-[10px] font-bold">
-                  IIT Patna Ecosystem
-                </span>
-              </div>
-
-              {/* Team Header */}
-              <div className="flex items-center gap-4 mb-5">
-                <div className="w-14 h-14 rounded-2xl bg-[#12100E] text-white flex items-center justify-center border-2 border-[#12100E] shadow-[3px_3px_0px_#C22918] shrink-0">
-                  <Users className="w-7 h-7 text-amber-400" />
-                </div>
-                <div>
-                  <h4 className="font-editorial text-2xl font-black text-[#12100E]">
-                    Team Foodieree
-                  </h4>
-                  <p className="text-xs font-mono font-bold text-[#C22918]">
-                    Founders, Engineers & Operators • IIT Patna
-                  </p>
-                </div>
-              </div>
-
-              {/* Team Mission Statement */}
-              <blockquote className="p-4 rounded-xl bg-[#FAF7F0] border-l-4 border-[#047857] text-xs sm:text-sm text-[#4A453E] leading-relaxed mb-5 font-sans">
-                &ldquo;We are a multidisciplinary team of student innovators and engineers from <strong>IIT Patna</strong> building Foodieree — a hyperlocal food discovery and ordering ecosystem designed to bridge short-form culinary storytelling with seamless neighborhood dining and doorstep delivery.&rdquo;
-              </blockquote>
-
-              {/* Key Highlights */}
-              <div className="space-y-2 text-xs font-mono text-[#2E2A24]">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#047857] shrink-0" />
-                  <span>Student Innovators & Technologists at IIT Patna</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#047857] shrink-0" />
-                  <span>Full-Stack Engineering, AI Discovery & Logistics Expertise</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#047857] shrink-0" />
-                  <span>Accelerated & Incubation-Backed by FasterCapital</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-5 mt-5 border-t border-[#EDE6D8]">
-              <a
-                href="https://fastercapital.com/incubation-pending/foodieree.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#047857] hover:text-[#064E3B] hover:underline"
-              >
-                <span>Read Venture Profile on FasterCapital</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Right Column: The Genesis & The 3 Core Commitments */}
-          <div className="lg:col-span-7 rounded-2xl bg-white border-2 border-[#12100E] p-6 sm:p-8 shadow-[5px_5px_0px_#12100E] flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between pb-3.5 mb-5 border-b border-[#EDE6D8]">
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#736B5E] flex items-center gap-1.5">
-                  <Flame className="w-4 h-4 text-[#C22918]" />
-                  <span>The Genesis & Solution</span>
-                </span>
-                <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-900 border border-emerald-300 font-mono text-[10px] font-bold">
-                  Zero Platform & Delivery Fee
-                </span>
-              </div>
-
-              <h4 className="font-editorial text-2xl sm:text-3xl font-bold text-[#12100E] leading-tight mb-3">
-                Born From Frustration Over Late-Night Chai at IIT Patna
-              </h4>
-
-              <div className="space-y-3 text-xs sm:text-sm text-[#4A453E] leading-relaxed mb-6">
-                <p>
-                  The idea of Foodieree was born out of a shared frustration among tech and design friends from college. We constantly watched mouth-watering food videos online, but had no direct way to order that bubbling dish locally.
-                </p>
-                <p>
-                  During our work on a previous startup <strong>FreeHydr8</strong> (distributing free water bottles in college events through brand sponsorships), we met several local restaurant owners. One owner shared how he had spent heavily on social media influencers to promote his eatery, yet saw <em>zero real footfall or orders</em>.
-                </p>
-                <p>
-                  That highlighted the broken link between online food hype and actual customer orders. Over countless chai breaks at IIT Patna, we built <strong>Foodieree</strong>: combining short-form 15s video feeds, mood-based dine-in search, and instant direct checkout.
-                </p>
               </div>
             </div>
           </div>
