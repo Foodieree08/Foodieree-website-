@@ -196,10 +196,26 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <strong>Location data:</strong>
-                  <div className="mt-1 pl-2 space-y-1">
+                  <div className="mt-2 pl-2 space-y-3">
                     <p>
-                      <strong>Consumer:</strong> We collect precise or approximate location data from your Device if you enable us to do so. We collect this data from the time a Service is requested until it is finished, and any time the app is running in the foreground of your Device. We use this data to enhance your use of Foodieree App, including to improve mutually delivery locations, nearby show reel, and prevent and detect fraud. Even if you have not enabled us to collect location data from your Device, we collect the Delivery Partner&apos;s location data collected during a drop off, and links such location data with your account. This enables us to offer services to you, such as receipt generation and customer support.
+                      <strong>Consumer:</strong> We collect precise or approximate location data from your Device if you enable us to do so. We collect this data from the time a Service is requested until it is finished, and any time the app is running in the foreground of your Device. We use this data to enhance your use of Foodieree App, including to improve delivery locations, show nearby restaurants/reels, and prevent and detect fraud. Even if you have not enabled us to collect location data from your Device, we collect the Delivery Partner&apos;s location data during a drop off, and link such location data with your account. This enables us to offer services to you, such as receipt generation and customer support.
                     </p>
+                    <div className="space-y-1.5 border-l-2 border-red-500/40 pl-3">
+                      <p>
+                        <strong>Delivery Partner (Delivery Boy / Delivery Executive):</strong>
+                      </p>
+                      <ul className="list-disc list-outside space-y-1.5 pl-5 text-sm sm:text-base">
+                        <li>
+                          <strong>Foreground &amp; Background Location Collection:</strong> We collect precise and approximate real-time geolocation data from Delivery Partners&apos; mobile devices both when the Foodieree Delivery Partner App is running in the foreground (app open and on-screen) and in the background (app open but minimized, screen locked, or app not actively in view), provided the Delivery Partner has set their status to &ldquo;Online&rdquo; / &ldquo;On-Duty&rdquo; or is actively engaged in an assigned delivery task (from accepting the order, traveling to restaurant pickup, until final drop-off at the customer&apos;s location).
+                        </li>
+                        <li>
+                          <strong>Purpose of Collection:</strong> Background and real-time location data is collected strictly to: (i) allocate nearby pickup and delivery orders efficiently based on proximity; (ii) share live real-time order tracking with Consumers and Restaurant Partners; (iii) calculate accurate transit distance and time for delivery fee compensation, partner earnings, and incentives; and (iv) provide route navigation, optimize delivery safety, and resolve delivery disputes.
+                        </li>
+                        <li>
+                          <strong>Control &amp; Disabling Location:</strong> Location tracking ceases when the Delivery Partner toggles their status to &ldquo;Offline&rdquo; / &ldquo;Off-Duty&rdquo; or logs out of the Delivery Partner App. Location permissions can also be revoked or modified at any time through the Device&apos;s operating system settings.
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </li>
                 <li>
@@ -249,7 +265,9 @@ export default function PrivacyPolicyPage() {
               <li>To identify and/or detect security breaches or attacks, errors, fraud, money laundering, abuse and other criminal activities, and investigating and taking appropriate remedial action;</li>
               <li>We provide some of your Personal Information (such as your name, email ID, contact number, delivery location) to the Delivery Partner and/or Restaurant Partner who accepts your request for Services so that the Delivery Partner and/or Restaurant Partner may contact for the delivery of the order;</li>
               <li>If you are a Consumer, we use geo-location information for various purposes, including delivery location determination, to automatically fetch your location when you open the Foodieree App;</li>
-              <li>If you are a Delivery Partner, we may share your name, phone number and/or profile picture (if applicable), tracking details with our Consumers to provide them the Services;</li>
+              <li>
+                If you are a Delivery Partner, we collect, process, and share your real-time location details (including in the background when the app is closed, minimized, or not in active view while you are On-Duty or actively fulfilling an order), along with your name, phone number, and vehicle/profile details with Consumers and Restaurant Partners to provide live order tracking, calculate distance-based compensation and partner payouts, optimize dispatch, and verify delivery completion;
+              </li>
               <li>We may use your Personal Information or Usage Information that we collect about you: (a) to provide you with information or services or process transactions that you have requested or agreed to receive including to send you electronic newsletters, or to provide you with special offers or promotional materials on behalf of us or third parties; (b) to enable you to participate in a variety of the Services&apos; features such as online or mobile entry sweepstakes, contests or other promotions; (c) to contact you with regard to your use of the Services and, in our discretion, changes to the Services and/or the Services&apos; policies; (d) for internal business purposes; (e) for inclusion in our data analytics; and (f) for purposes disclosed at the time you provide your Information or as otherwise set forth in this Policy;</li>
               <li>To enhance your user experience in relation to the Foodieree App or the Services, including customisation / personalization of the Foodieree App or the Services;</li>
               <li>To provide relevant offers or rewards to you, based on your consumption patterns;</li>
